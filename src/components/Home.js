@@ -4,7 +4,7 @@ export default function Home(props) {
   return (
     <div className='home'>
       <header className='homeheader'><button className="switchbutton" onClick={()=>props.onFormSwitch("login")}>Logout</button></header>
-      <h1 className='heading'>Redlitmus</h1>
+      <h1 className='heading'>REDLITMUS COMMUNICATIONS</h1>
       <h2 className='heading1'>About Us</h2>
       <h3 className='heading1'>Our Roots</h3>
       <p>At Redlitmus Communications, we’ve built numerous years of experience in the Voice and Messaging industry. Experience that helps us create innovative solutions for our clients’ needs. With over 10 years of experience in understanding the market demands we keep developing software services in the cloud for clients who wish to use Voice and Messaging services to develop a better business and raise customer satisfaction.</p>
