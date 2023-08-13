@@ -34,6 +34,7 @@ const handleSubmit=(e)=>{
   setEmail("");
   setPassword("");
   setUserName("");
+  setRePassword("");
 }
 
   return (
