@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+
+import React,{ useState } from 'react';
+
+
 import './App.css';
+import Login from './components/Login';
+import Register from './components/Register';
+import Home from './components/Home';
+//import { BrowserRouter as Router,Routes, Route,Link } from 'react-router-dom';
+
+
+
 
 function App() {
+  const[currForm, setCurrform]=useState("login");
+  const toogleForm=(formName)=>{
+    setCurrform(formName)
+ }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    {currForm ==="login"? <Login onFormSwitch={toogleForm}/>: (currForm ==="home"? <Home onFormSwitch={toogleForm}/>:<Register onFormSwitch={toogleForm}/>)}
+    
     </div>
   );
 }
 
-export default App;
+export default App; 

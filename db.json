@@ -1,0 +1,11 @@
+{
+  "inputs": [
+    {
+      "id": 1,
+      "name": "Naveen V",
+      "email": "naveenvaradharaj1999@gmail.com",
+      "password": "123456",
+      "repassword": "123456"
+    }
+  ]
+}
