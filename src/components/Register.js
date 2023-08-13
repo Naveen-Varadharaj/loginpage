@@ -12,7 +12,7 @@ const[res, setRes]=useState([]);
 const[input, setInput]=useState([]);
 
 useEffect(()=>{
-  axios.get('http://localhost:3004/inputs')
+  axios.get('http://localhost:3000/inputs')
   .then(json => setInput(json.data))
   .catch((err) => console.log(err));
 },[]);
@@ -20,7 +20,7 @@ useEffect(()=>{
 const handleSubmit=(e)=>{
   e.preventDefault();
   if(!input.some(el => (el.email === email )) && password===repassword){
-    axios.post('http://localhost:3004/inputs', {name:username, email:email, password:password, repassword:repassword})
+    axios.post('http://localhost:3000/inputs', {name:username, email:email, password:password, repassword:repassword})
     .then(json => setRes([...res,json.data]));
     alert("Account created")
     props.onFormSwitch("home");

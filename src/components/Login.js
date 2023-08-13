@@ -9,7 +9,7 @@ const[input, setInput]=useState([]);
 
 
 useEffect(()=>{
-  axios.get('http://localhost:3004/inputs')
+  axios.get('http://localhost:3000/inputs')
   .then(json => setInput(json.data))
   .catch((err) => console.log(err));
 },[]);
