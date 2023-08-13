@@ -18,7 +18,7 @@ useEffect(()=>{
 
 const handleSubmit=(e)=>{
    e.preventDefault();  
-   if((input.some(el => el.email === email))&& (input.some(el => el.email === email))){
+   if((input.some(el => el.email === email))&& (input.some(el => el.password === password))){
     
     props.onFormSwitch("home");
   }
